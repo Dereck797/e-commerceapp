@@ -6,7 +6,7 @@ import styled from 'styled-components'
 
 
 const Component = styled.div`
-    height: 60px;
+    height: auto;
     /* background-color: black; */
 `
 
@@ -26,13 +26,14 @@ const Left = styled.div`
 const Lenguaje = styled.span`
     font-size: 14px;
     cursor: pointer;
-` 
+`
 
 const SearchContainer = styled.div`
     border: 1px solid lightgray;
     display:flex;
     align-items:center;
     margin-left: 25px;
+    padding:5px;
 `
 
 const Input = styled.input`
@@ -62,15 +63,14 @@ const MenuItem = styled.div`
 `
 
 const Navbar = () => {
-  return ( 
-      <Fragment>
+    return (
         <Component>
             <Wrapper>
                 <Left>
                     <Lenguaje>EN</Lenguaje>
                     <SearchContainer>
-                        <Input/>
-                        <Search style={{color:"gary", fontSize:20}}/>
+                        <Input />
+                        <Search style={{ color: "gary", fontSize: 20 }} />
                     </SearchContainer>
                 </Left>
                 <Center>
@@ -83,14 +83,13 @@ const Navbar = () => {
                     <MenuItem>SIGN IN</MenuItem>
                     <MenuItem>
                         <Badge badgeContent={4} color="primary">
-                            <LocalGroceryStoreOutlinedIcon/>
+                            <LocalGroceryStoreOutlinedIcon />
                         </Badge>
                     </MenuItem>
                 </Right>
-            </Wrapper>    
-        </Component>       
-      </Fragment>
-  )
+            </Wrapper>
+        </Component>
+    )
 }
 
 export default Navbar
